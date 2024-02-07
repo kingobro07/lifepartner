@@ -1,0 +1,258 @@
+.animated-background {
+  width: 100%;
+  height: 100%;
+  position: fixed; /* Fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  z-index: -1;
+  animation: gradientAnimation 20s linear infinite;
+  background: linear-gradient(
+    45deg,
+    #b86bff, #ff7e75, #75a8ff, #ff758c, #b86bff,
+    #ff7eb3, #b86bff, #75a8ff, 
+    #b4ff75, #b86bff, #ffcf75, #ffb375, #ff7e75, #75a8ff, #b86bff
+  );
+  background-size: 3000% 3000%;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+body {
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+/* Other styles remain unchanged */
+
+#Heading{font-family:Times New Roman;
+
+border:dotted indigo 5px;
+border-radius:30px;
+margin-bottom:20px;
+font-weight:bold;
+font-size:22px;
+margin-top:6px;
+margin-left:20px;
+margin-right:20px;
+}
+
+#name{text-align:center;
+border: solid 3px blue;
+font-size: 18px;
+border-radius:30px;
+font-weight:bold;
+padding-top:8px;
+padding-bottom:8px;
+padding-left:30px;
+padding-right:30px;
+margin-top:5px;
+margin-bottom:20px;
+
+
+}
+
+select {
+    /* Hiding the default arrow */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Adding custom arrow */
+    background-image: url('path_to_your_custom_arrow_image.png');
+    background-size: 15px; /* Adjust the size of the arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    /* Other styling */
+    padding-right: 25px; /* Add space for the arrow */
+}
+#birthday{text-align:center;
+border: solid 3px blue;
+font-size: 18px;
+border-radius:30px;
+font-weight:bold;
+padding-top:8px;
+padding-bottom:8px;
+padding-left:30px;
+padding-right:30px;
+margin-top:5px;
+margin-bottom:20px;
+}
+
+#birthtime{text-align:center;
+border: solid 3px blue;
+font-size: 18px;
+border-radius:30px;
+font-weight:bold;
+padding-top:8px;
+padding-bottom:8px;
+padding-left:30px;
+padding-right:30px;
+margin-top:5px;
+margin-bottom:20px;
+}
+#country{text-align:center;
+border: solid 3px blue;
+font-size: 18px;
+border-radius:30px;
+font-weight:bold;
+padding-top:8px;
+padding-bottom:8px;
+padding-left:30px;
+padding-right:30px;
+margin-top:5px;
+margin-bottom:20px;
+}
+#state{text-align:center;
+border: solid 3px blue;
+font-size: 18px;
+border-radius:30px;
+font-weight:bold;
+padding-top:8px;
+padding-bottom:8px;
+padding-left:30px;
+padding-right:30px;
+margin-top:5px;
+margin-bottom:20px;
+}
+#city{text-align:center;
+border: solid 3px blue;
+font-size: 18px;
+border-radius:30px;
+font-weight:bold;
+padding-top:8px;
+padding-bottom:8px;
+padding-left:30px;
+padding-right:30px;
+margin-top:5px;
+margin-bottom:20px;
+}
+
+
+
+
+
+label {
+    font-weight:bold;
+    font-size:20px;
+    font-family:Courier New;
+    display: block;
+    margin:2px 10px 2px 10px;
+    outline:none;
+}
+
+input,
+select,
+button {
+    outline:none;
+}
+
+#errorMessage {
+    color: red;
+    font-family: 'Your Desired Font', sans-serif; /* Replace 'Your Desired Font' with the actual font name */
+    margin-top: 10px;
+}
+
+/* Add more styles as needed for your layout */
+/* Popup Styles */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; /* Adjust as needed */
+  left: 0; /* Adjust as needed */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow:visible;
+}
+
+.popup-content {
+    z-index: 9999;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size:20px;
+    max-height:70%;
+    max-width:60%;
+    font-weight:bold;
+    font-family:Comic Sans MS;
+    border:solid 5px red;
+    background-color: #FF9800;
+    color:#D8210B;
+    transform: translate(-50%, -50%);
+    font-size:11.5px;
+    padding: 30px;
+    border-radius: 80px;
+    box-shadow: 0 0 9999px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Ensure the popup remains on top even when scrolling */
+body.popup-open {
+    overflow: auto;
+}
+
+
+
+
+.closebtn{
+  background-color: orange;
+color:black;
+height:2px;
+width:80px;
+font-weight:bold;
+font-size:;
+position:absolute;
+top:80%;
+left:50%;
+font-size:5px;
+padding-left:10px;
+padding-right:10px;
+padding-top:5px;
+padding-bottom:5px;
+}
+
+.city-container {
+    position: relative;
+}
+
+#calcbtn{display:block;
+position:absolute;
+bottom: -90px; /* Adjust this value as needed */
+    left: 50%;
+    transform: translateX(-50%);
+width:300px;
+background:lightGreen;
+border:solid 4px #192586;
+border-radius:20px;
+/*margin-left:15px;
+margin-right:15px;
+margin-top:40px;
+margin-bottom:40px;*/
+padding:10px;
+font-weight:bold;
+font-family:Times New Roman;
+font-size:10px;
+margin-bottom:160px;
+}
+
+#city {
+  margin-bottom: 150px; /* Adjust this value as needed */
+}
+
+
+
+
+
+
+
+/* Media Query for Desktops */
+@media screen and (min-width: 1024px) {
+    /* Adjust styles for desktops */
+    
